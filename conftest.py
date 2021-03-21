@@ -16,7 +16,7 @@ import pytest
 def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default="chrome",
                      help='choose browser: chrome of firefox')  # Мы добавили опцию , которая отвечает за выбор браузера
-    parser.addoption('--language', action='store', default='None',
+    parser.addoption('--language', action='store', default='en',
                      help='choose language en, ru ... etc')  # А эта опция отвечает за выбор языка
 
 
