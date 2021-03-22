@@ -12,3 +12,4 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     basket_link = (By.CSS_SELECTOR, "button.btn-add-to-basket")
+    product_add_succsessful = (By.CSS_SELECTOR, "div.alertinner > strong")
