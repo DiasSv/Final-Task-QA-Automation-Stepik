@@ -21,7 +21,7 @@ class MainPage(BasePage):
         образуются циклические зависимости, что часто приводит к ошибкам.
         '''
 
-        return LoginPage(browser=self.browser, url=self.browser.current_url)
+        #return LoginPage(browser=self.browser, url=self.browser.current_url)
 
     def should_be_login_link(self):  # проверяет наличие элемента на странице
         assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "login link is not present"
