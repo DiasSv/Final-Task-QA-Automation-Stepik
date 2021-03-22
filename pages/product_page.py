@@ -8,3 +8,8 @@ class ProductPage(BasePage):
         basket_link = self.browser.find_element(*ProductPageLocators.basket_link)
         basket_link.click()
 
+    def should_be_product_in_alert(self):
+        assert "The shellcoder's handbook" in self.is_element_present(*ProductPageLocators.product_add_succsessful), \
+                                                                                         "Product NO add to basket "
+
+
