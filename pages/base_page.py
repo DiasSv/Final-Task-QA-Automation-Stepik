@@ -9,6 +9,7 @@ class BasePage():
         self.url = url
         self.browser.implicitly_wait(timeout)
 
+    '''Эта функция отвечает за универсальную проверку наличия элемента на странице Возращает булево значение'''
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
