@@ -13,3 +13,4 @@ class LoginPageLocators():
 class ProductPageLocators():
     basket_link = (By.CSS_SELECTOR, "button.btn-add-to-basket")
     product_add_succsessful = (By.CSS_SELECTOR, "div.alertinner > strong")
+    price = (By.CSS_SELECTOR, "div.col-sm-6.product_main > p.price_color")
