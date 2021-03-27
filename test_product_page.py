@@ -1,5 +1,3 @@
-import time
-
 from pages.product_page import ProductPage
 
 
@@ -10,5 +8,4 @@ def test_guest_can_add_product_to_basket(browser):
     product_page.go_to_basket()  # Нажимаю на кнопку добавления в корзину
     product_page.solve_quiz_and_get_code()  # Провека алерта для получения кода прохождения
     product_page.should_be_product_in_alert()  # Проверяем действительно ли у нас добавился наш товар
-    time.sleep(4)
     product_page.should_be_okey_price()
