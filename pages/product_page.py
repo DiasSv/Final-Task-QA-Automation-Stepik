@@ -1,6 +1,5 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
-from selenium.common.exceptions import NoAlertPresentException
 
 
 class ProductPage(BasePage):
@@ -9,7 +8,8 @@ class ProductPage(BasePage):
         basket_link.click()
 
     def should_be_product_in_alert(self):
-        assert "The shellcoder's handbook" in self.is_element_present(*ProductPageLocators.product_add_succsessful), \
-                                                                                         "Product NO add to basket "
+        assert "The shellcoder's handbook" == self.browser.find_element(*ProductPageLocators.product_add_succsessful) \
+                                                                                    .text, "Product NO add to basket "
 
-
+    def should_be_okey_price(self):
+        assert self.browser.find_element(*ProductPageLocators.price).text == "£9.99", "the price is not match"
