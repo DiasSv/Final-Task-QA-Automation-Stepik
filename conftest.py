@@ -27,7 +27,7 @@ def browser(request):
     browser = None
     if browser_name == "chrome":
         options = Options()
-        options.add_experimental_option('prefs', {'intl.accept_languages' : user_language})
+        options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
         print("\n start chrome browser test suite")
         browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     elif browser_name == "firefox":

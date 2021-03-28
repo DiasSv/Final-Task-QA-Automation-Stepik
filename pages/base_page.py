@@ -22,6 +22,7 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
+    '''Эта функция нужна для получения специального кода, который нужен для прохождения курса'''
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
         x = alert.text.split(" ")[2]
