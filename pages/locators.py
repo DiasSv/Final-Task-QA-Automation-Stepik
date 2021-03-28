@@ -15,4 +15,4 @@ class ProductPageLocators():
     product_add_succsessful = (By.CSS_SELECTOR, "div.alertinner > strong")
     name_product = (By.CSS_SELECTOR, "div.col-sm-6.product_main > h1")
     price = (By.CSS_SELECTOR, "div.col-sm-6.product_main > p.price_color")
-    price_add = (By.CSS_SELECTOR, "div.alert.alert-safe.alert-noicon.alert-info.fade.in > div.alertinner strong")
+    price_add_basket = (By.CSS_SELECTOR, "div.alert.alert-safe.alert-noicon.alert-info.fade.in > div.alertinner strong")

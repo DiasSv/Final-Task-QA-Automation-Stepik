@@ -13,4 +13,4 @@ class ProductPage(BasePage):
 
     def should_be_right_price(self):
         assert self.browser.find_element(*ProductPageLocators.price).text == \
-               self.browser.find_element(*ProductPageLocators.price_add).text, "Price is not okay"
+               self.browser.find_element(*ProductPageLocators.price_add_basket).text, "Price is not okay"
