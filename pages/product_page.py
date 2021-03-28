@@ -7,9 +7,10 @@ class ProductPage(BasePage):
         basket_link = self.browser.find_element(*ProductPageLocators.basket_link)
         basket_link.click()
 
-    def should_be_product_in_alert(self):
-        assert "The shellcoder's handbook" == self.browser.find_element(*ProductPageLocators.product_add_succsessful) \
-                                                                                    .text, "Product NO add to basket "
+    def should_be_product_in_basket(self):
+        assert self.browser.find_element(*ProductPageLocators.name_product).text == \
+               self.browser.find_element(*ProductPageLocators.product_add_succsessful).text, "Product NO add to basket "
 
-    def should_be_okey_price(self):
-        assert self.browser.find_element(*ProductPageLocators.price).text == "£9.99", "the price is not match"
+    def should_be_right_price(self):
+        assert self.browser.find_element(*ProductPageLocators.price).text == \
+               self.browser.find_element(*ProductPageLocators.price_add).text, "Price is not okay"
