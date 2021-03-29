@@ -21,10 +21,11 @@ class BasePage():
             return False
         return True
 
-    '''Эта функция отвечает за проверку отсутствия элемента на странице'''
+    '''Эта функция отвечает за проверку отсутствия элемента на странице, функция ждет, пока элемент не пропадет'''
     def is_disappeared(self, how, what, timeout=4):
         try:
-            WebDriverWait(self.browser, timeout, 1, TimeoutException).until_not(EC.presence_of_element_located((how, what)))
+            WebDriverWait(self.browser, timeout, 1, TimeoutException).\
+                until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
 
