@@ -1,17 +1,14 @@
 from .base_page import BasePage
 from .login_page import LoginPage
 from .locators import MainPageLocators
+from .locators import BasketPageLocators
 
 
 class MainPage(BasePage):
 
     """Ставим заглушку"""
-
     def __init__(self, *args, **kwargs):
         super(MainPage, self).__init__(*args, **kwargs)
-
-
-
 
     '''
     def go_to_login_page(self):  # переходит на страницу логина
